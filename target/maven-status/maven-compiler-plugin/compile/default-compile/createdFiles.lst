@@ -1,8 +1,10 @@
 com\webautomation\Page_Factory\Page\TiketAgodaPage.class
 com\webautomation\Page_Factory\Object_Repository\HomeAgodaObjectRepository.class
+com\webautomation\Page_Factory\Object_Repository\IsiKontakAgodaObjectRepository.class
 com\webautomation\Page_Factory\Object_Repository\TiketAgodaObjectRepository.class
 com\webautomation\Page_Factory\Page\HomeAgodaPage.class
 com\webautomation\Page_Factory\Page\VerifikasiTiketAgodaPage.class
 com\webautomation\AbstractComponents\AbstractComponents.class
+com\webautomation\Page_Factory\Page\IsiKontakAgodaPage.class
 com\webautomation\Main.class
 com\webautomation\Page_Factory\Object_Repository\VerifikasiTiketAgodaObjectRepository.class

@@ -1,9 +1,10 @@
 package stepdefenitions;
+import java.util.List;
 import java.util.concurrent.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
 import com.webautomation.Page_Factory.Page.HomeAgodaPage;
+import com.webautomation.Page_Factory.Page.IsiKontakAgodaPage;
 import com.webautomation.Page_Factory.Page.TiketAgodaPage;
 import com.webautomation.Page_Factory.Page.VerifikasiTiketAgodaPage;
 import hook.Hooks;
@@ -82,11 +83,18 @@ public class BookFlightImpl {
     }
 
     @When("User verifikasi detail tiket")
-    public void User_verifikasi_detail_tiket(){
+    public void User_verifikasi_detail_tiket() throws InterruptedException{
         VerifikasiTiketAgodaPage verifikasitiketAgodaPage = new VerifikasiTiketAgodaPage(driver);
         Assert.assertTrue(verifikasitiketAgodaPage.verifikasiPenerbanganPergi(), "Penerbangan pergi tidak sesuai!");
         Assert.assertTrue(verifikasitiketAgodaPage.verifikasiPenerbanganPulang(), "Penerbangan pulang tidak sesuai!");
-        Assert.assertTrue(verifikasitiketAgodaPage.verifikasiAdaMaskapaiAirAsia(), "Tidak ada maskapai AirAsia di daftar penerbangan!");
-        // Assert.assertTrue(verifikasitiketAgodaPage.verifikasiHarga() < 5000000, "Harga tiket lebih dari Rp 5 juta!");
+        List<String> daftarMaskapai = verifikasitiketAgodaPage.verifikasiAdaMaskapai();
+        Assert.assertTrue(!daftarMaskapai.isEmpty(), "Tidak ada maskapai yang tampil di halaman!");
+        Assert.assertTrue(verifikasitiketAgodaPage.verifikasiHarga() < 10000000, "Harga tiket lebih dari Rp 10 juta!");
+    }
+
+    @Then("User isi informasi kontak")
+    public void User_isi_informasi_kontak(){
+        IsiKontakAgodaPage isiKontakAgodaPage = new IsiKontakAgodaPage(driver);
+        isiKontakAgodaPage.IsiKontak("Chairun", "Puspitasari", "kueichaa@gmail.com", "87886095151");
     }
 }

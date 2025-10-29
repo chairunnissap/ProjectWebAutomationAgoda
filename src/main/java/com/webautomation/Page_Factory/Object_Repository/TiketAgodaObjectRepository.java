@@ -21,12 +21,6 @@ public class TiketAgodaObjectRepository {
         PageFactory.initElements(driver,this);
     }
 
-    // public By CheckboxMaskapai(String namaMaskapai) {
-    //     return By.xpath(
-    //         "//p[text()='" + namaMaskapai + "']/ancestor::div[contains(@class,'a61f8-box')][1]"
-    //     );
-    // }
-
     public By arrowDetailByAirline(String namaMaskapai) {
         return By.xpath("//p[text()='" + namaMaskapai + "']/ancestor::div[@data-testid='web-refresh-flights-card']//svg");
     }

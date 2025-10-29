@@ -10,7 +10,7 @@ Scenario Outline: User can book flight successfully
     When User filter maskapai "AirAsia"
     Then User pilih maskapai terpilih
     When User verifikasi detail tiket
-    # Then User click on the finish button and User verify the order is placed successfully 
+    Then User isi informasi kontak
     Examples:
         |bandaraberangkat   | bandaradestinasi  |
         |Jakart             | Singapur          |

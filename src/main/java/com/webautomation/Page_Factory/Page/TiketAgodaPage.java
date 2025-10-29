@@ -100,21 +100,15 @@ public class TiketAgodaPage extends AbstractComponents{
 
                 List<WebElement> flightCards = wait.until(ExpectedConditions
                         .visibilityOfAllElementsLocatedBy(By.cssSelector("[data-testid='drone-box']")));
-
                 if (flightCards.isEmpty() || index >= flightCards.size()) {
                     throw new NoSuchElementException("Tidak ditemukan card ke-" + index);
                 }
-
                 WebElement card = flightCards.get(index);
-
                 By pilihButton = By.cssSelector("button[data-element-name='flight-detail-select-button']");
                 WebElement button = card.findElement(pilihButton);
-
                 wait.until(ExpectedConditions.elementToBeClickable(button));
-
                 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", button);
                 Thread.sleep(500);
-
                 button.click();
                 System.out.println("Berhasil klik tombol 'Pilih' pada card ke-" + index);
                 success = true;
@@ -143,7 +137,6 @@ public class TiketAgodaPage extends AbstractComponents{
             try {
                 pilihButton.click();
             } catch (Exception e) {
-                // Jika gagal klik biasa, pakai klik via JavaScript
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", pilihButton);
             }
             System.out.println("Berhasil klik tombol 'Pilih'.");

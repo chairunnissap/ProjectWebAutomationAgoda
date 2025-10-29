@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 60.73 s <<< FAILURE! -- in runner.TestRunner
-runner.TestRunner.runScenario["User can book flight successfully", "Book Flight functionality"](1) -- Time elapsed: 59.02 s <<< FAILURE!
-java.lang.AssertionError: Penerbangan pergi tidak sesuai! expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at stepdefenitions.BookFlightImpl.User_verifikasi_detail_tiket(BookFlightImpl.java:87)
-	at ✽.User verifikasi detail tiket(classpath:features/BookFlightAgoda.feature:12)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 75.47 s -- in runner.TestRunner
