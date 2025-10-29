@@ -2,13 +2,15 @@ Feature: Book Flight functionality
 
 Scenario Outline: User can book flight successfully
     When User can access web Agoda
-    # Then User click on the login button
-    # When User add product to the cart "<productName>"
-    # Then User click on the cart icon
-    # When User verify the product is added to the cart
-    # Then User click on the checkout button and User fills in the shipping details
-    # When User overview in the shipping details
+    Then User click pesawat button
+    When User click PulangPergi button
+    Then User input dan pilih bandara keberangkatan "<bandaraberangkat>" dan destinasi "<bandaradestinasi>"
+    When User click tgl brgkt dan tgl pulang
+    Then User click tombol penumpang dan cari penerbangan
+    When User filter maskapai "AirAsia"
+    Then User pilih maskapai terpilih
+    When User verifikasi detail tiket
     # Then User click on the finish button and User verify the order is placed successfully 
-    # Examples:
-    #     |productName         |
-    #     |Sauce Labs Backpack | 
+    Examples:
+        |bandaraberangkat   | bandaradestinasi  |
+        |Jakart             | Singapur          |

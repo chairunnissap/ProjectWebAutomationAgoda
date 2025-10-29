@@ -1,34 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.55 s <<< FAILURE! -- in runner.TestRunner
-runner.TestRunner.runScenario["User can book flight successfully", "Book Flight functionality"](1) -- Time elapsed: 13.93 s <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-Unable to locate element: //h6[contains(@class,'Typographystyled__TypographyStyled') and text()='Pesawat']
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [0a4e1094-a6b9-443d-98cf-995a1fde55bc, findElement {using=xpath, value=//h6[contains(@class,'Typographystyled__TypographyStyled') and text()='Pesawat']}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 144.0, moz:accessibilityChecks: false, moz:buildID: 20251009125714, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 30340, moz:profile: C:\Users\chair\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 0a4e1094-a6b9-443d-98cf-995a1fde55bc
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at com.webautomation.Page_Factory.Page.HomeAgodaPage.GotoPesawat(HomeAgodaPage.java:32)
-	at stepdefenitions.BookFlightImpl.User_can_access_web_Agoda(BookFlightImpl.java:18)
-	at ✽.User can access web Agoda(classpath:features/BookFlightAgoda.feature:4)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 60.73 s <<< FAILURE! -- in runner.TestRunner
+runner.TestRunner.runScenario["User can book flight successfully", "Book Flight functionality"](1) -- Time elapsed: 59.02 s <<< FAILURE!
+java.lang.AssertionError: Penerbangan pergi tidak sesuai! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepdefenitions.BookFlightImpl.User_verifikasi_detail_tiket(BookFlightImpl.java:87)
+	at ✽.User verifikasi detail tiket(classpath:features/BookFlightAgoda.feature:12)
 

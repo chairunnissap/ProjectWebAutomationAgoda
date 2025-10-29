@@ -130,29 +130,10 @@
                   </a> <!-- runScenario("User can book flight successfully", "Book Flight functionality") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("User can book flight successfully","Book Flight functionality")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //h6[contains(@class,&apos;Typographystyled__TypographyStyled&apos;) and text()=&apos;Pesawat&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [0a4e1094-a6b9-443d-98cf-995a1fde55bc, findElement {using=xpath, value=//h6[contains(@class,&apos;Typographystyled__TypographyStyled&apos;) and text()=&apos;Pesawat&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 144.0, moz:accessibilityChecks: false, moz:buildID: 20251009125714, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 30340, moz:profile: C:\Users\chair\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 0a4e1094-a6b9-443d-98cf-995a1fde55bc
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at com.webautomation.Page_Factory.Page.HomeAgodaPage.GotoPesawat(HomeAgodaPage.java:32)
-	at stepdefenitions.BookFlightImpl.User_can_access_web_Agoda(BookFlightImpl.java:18)
-	at ✽.User can access web Agoda(classpath:features/BookFlightAgoda.feature:4)
-... Removed 5 stack frames
+                  <div class="stack-trace">java.lang.AssertionError: Penerbangan pergi tidak sesuai! expected [true] but found [false]
+	at stepdefenitions.BookFlightImpl.User_verifikasi_detail_tiket(BookFlightImpl.java:87)
+	at ✽.User verifikasi detail tiket(classpath:features/BookFlightAgoda.feature:12)
+... Removed 3 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
@@ -223,12 +204,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.TestRunner')
-data.setCell(0, 3, 13918);
+data.setCell(0, 3, 59012);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 59 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -256,18 +237,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@8d7b252)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@7b676112)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("User can book flight successfully", "Book Flight functionality")</span>
-                <span class="method-start">801 ms</span>
+                <span class="method-start">821 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">14733 ms</span>
+                <span class="method-start">59845 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

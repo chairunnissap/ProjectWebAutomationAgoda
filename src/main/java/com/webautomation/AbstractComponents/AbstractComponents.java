@@ -13,7 +13,14 @@ public class AbstractComponents {
     }
 
     public void waitForVisibilityElement(By findBy){
-         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
          wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
-    }    
+    }
+
+    public void refreshForVisibilityElement(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.refreshed(
+        ExpectedConditions.visibilityOfElementLocated(locator)
+    ));
+}
 }

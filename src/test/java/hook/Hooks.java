@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import com.webautomation.Page_Factory.Object_Repository.HomeAgodaObjectRepository;
-import com.webautomation.Page_Factory.Object_Repository.LoginObjectRepository;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -19,7 +18,7 @@ public class Hooks {
     @Before
     public void SetUp() throws IOException{
         Properties properties = new Properties();
-        FileInputStream fileInputStream = new FileInputStream("C:\\Users\\chair\\OneDrive - Badr Interactive\\Documents\\java\\WebAutomation\\webautomation\\src\\main\\resources\\GlobalData.properties");
+        FileInputStream fileInputStream = new FileInputStream("C:\\Users\\chair\\OneDrive - Badr Interactive\\Documents\\java\\WebAutomationAgoda\\webautomationagoda\\src\\main\\resources\\GlobalData.properties");
         properties.load(fileInputStream);
 
         String BrowserName = properties.getProperty("browser");
@@ -35,7 +34,7 @@ public class Hooks {
 
         
         driver.manage().window().maximize();
-        driver.get(properties.getProperty("url"));
+        driver.get(properties.getProperty("urli"));
         homeAgodaPage = new HomeAgodaObjectRepository(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
